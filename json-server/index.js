@@ -4,7 +4,6 @@ var port 	= 1111;
 var wf = "./data/example.json";
 
 var myArgs = process.argv.slice(2);
-console.log('myArgs: ', myArgs);
 
 var w = myArgs.indexOf("--watch");
 var p = myArgs.indexOf("--port");
@@ -25,6 +24,19 @@ http.createServer(function(request, response) {
     	});
     	response.write('<h1>ABOUT</h1>'); //write a response
     	response.end(); //end the response
+    } else if(url ==='/memJSON') {
+        response.writeHead(200, {
+            'Content-Type': 'text/json',
+            'Access-Control-Allow-Origin': '*',
+            'X-Powered-By':'nodejs'
+        });
+        var obj = new Object();
+        obj.name = "Joe";
+        obj.age  = 32;
+        obj.married = false;
+        var content= JSON.stringify(obj);
+        response.write(content);
+        response.end();
     } else {
         if(w >= 0) {
             var newWF = myArgs[w+1];
