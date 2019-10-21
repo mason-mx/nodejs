@@ -1,13 +1,38 @@
 # nodejs
 
-## Testing dataset for memory based json-server
+## JSON Server
 
-### post_education
+### Serve JSON data checking REQUEST URL
 
-POST URL:
+#### Providing memory based JSON data and Watching example.json
 
 ```
-<ipaddr>:1111/profile/education
+node index.js
+```
+
+#### Watching a separate JSON file
+
+```
+node index.js --watch package.json --port 2222
+```
+
+### Serve JSON data using express.route
+
+#### Providing memory based JSON data
+
+```
+npm install
+node server.js
+```
+
+#### RESTful API to update a profile
+
+##### post_education
+
+POST/DELETE URL:
+
+```
+<ipaddr>:1111/myprofile/education
 ```
 
 ```
@@ -20,12 +45,12 @@ or
 [{"from":"2007-09","to":"2010-07","school":"Takapuna","level":"intermediate"}]
 ```
 
-### put_education_byindex
+##### put_education_byindex
 
-PUT URL:
+PUT/DELETE URL:
 
 ```
-<ipaddr>:1111/profile/education/0
+<ipaddr>:1111/myprofile/education/0
 ```
 
 ```
