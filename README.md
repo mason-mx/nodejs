@@ -56,3 +56,32 @@ PUT/DELETE URL:
 ```
 {"from":"2007-09","to":"2010-07","school":"Milford","level":"intermediate"}
 ```
+
+## RESTful API
+
+### Serve JSON data using express.route and MongoDB
+
+```
+npm install
+sudo service mongod start
+node server.js
+```
+
+POST a task:
+
+```
+curl -X POST --data "name=Do the harlem shake" localhost:3000/tasks
+```
+
+DELETE a task:
+
+```
+curl -X DELETE localhost:3000/tasks/5dae5166a1dfb143491da796
+```
+
+PUT task/:id
+
+```
+curl -X PUT --data "status=completed" localhost:3000/tasks/5dae5166a1dfb143491da796
+curl -X PUT --data "name=Do the Best harlem shake" localhost:3000/tasks/5dae5166a1dfb143491da796
+```
