@@ -1,0 +1,9 @@
+{
+  "name": "jsonfile-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "bin": "bin.js",
+  "author": "MasonW",
+  "license": "MIT"
+}
