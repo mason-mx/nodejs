@@ -2,6 +2,13 @@
 
 ## JSON Server
 
+### Bundle your Node app to a single executable
+
+```
+npm install -g pkg
+pkg .
+```
+
 ### Serve JSON data checking REQUEST URL
 
 #### Providing memory based JSON data and Watching example.json
