@@ -1,26 +1,50 @@
 # nodejs
 
-## JSON Server
+## JSON File Server
 
 ### Bundle your Node app to a single executable
 
 ```
+cd jsonfile-server
 npm install -g pkg
 pkg .
 ```
+
+### Fetch data by these available URLs
+
+```
+<ipaddr>:1111/about
+<ipaddr>:1111/memJSON
+<ipaddr>:1111
+<ipaddr>:1111/instrument
+```
+
+The first one is composed by pure HTML elements. The second one a JSON object. The third and fourth are JSON files.
+
+## JSON Server
 
 ### Serve JSON data checking REQUEST URL
 
 #### Providing memory based JSON data and Watching example.json
 
 ```
+cd json-server
 node index.js
 ```
 
 #### Watching a separate JSON file
 
 ```
+cd json-server
 node index.js --watch package.json --port 2222
+```
+
+#### Fetch data by these available URLs
+
+```
+<ipaddr>:1111/about
+<ipaddr>:1111/memJSON
+<ipaddr>:1111
 ```
 
 ### Serve JSON data using express.route
@@ -28,6 +52,7 @@ node index.js --watch package.json --port 2222
 #### Providing memory based JSON data
 
 ```
+cd json-server
 npm install
 node server.js
 ```
@@ -52,7 +77,7 @@ or
 [{"from":"2007-09","to":"2010-07","school":"Takapuna","level":"intermediate"}]
 ```
 
-##### put_education_byindex
+##### put_education_by_index
 
 PUT/DELETE URL:
 
@@ -69,6 +94,7 @@ PUT/DELETE URL:
 ### Serve JSON data using express.route and MongoDB
 
 ```
+cd restful-apis
 npm install
 sudo service mongod start
 node server.js
