@@ -1,8 +1,6 @@
-# nodejs
+# JSON File Server
 
-## JSON File Server
-
-### Bundle your Node app to a single executable
+## Bundle your Node app to a single executable
 
 ```
 cd jsonfile-server
@@ -10,7 +8,7 @@ npm install -g pkg
 pkg .
 ```
 
-### Fetch data by these available URLs
+## Fetch data by these available URLs
 
 ```
 <ipaddr>:1111/about
@@ -21,25 +19,25 @@ pkg .
 
 The first one is composed by pure HTML elements. The second one a JSON object. The third and fourth are JSON files.
 
-## JSON Server
+# JSON Server
 
-### Serve JSON data checking REQUEST URL
+## Serve JSON data checking REQUEST URL
 
-#### Providing memory based JSON data and Watching example.json
+### Providing memory based JSON data and Watching example.json
 
 ```
 cd json-server
 node index.js
 ```
 
-#### Watching a separate JSON file
+### Watching a separate JSON file
 
 ```
 cd json-server
 node index.js --watch package.json --port 2222
 ```
 
-#### Fetch data by these available URLs
+### Fetch data by these available URLs
 
 ```
 <ipaddr>:1111/about
@@ -47,9 +45,9 @@ node index.js --watch package.json --port 2222
 <ipaddr>:1111
 ```
 
-### Serve JSON data using express.route
+## Serve JSON data using express.route
 
-#### Providing memory based JSON data
+### Providing memory based JSON data
 
 ```
 cd json-server
@@ -57,9 +55,9 @@ npm install
 node server.js
 ```
 
-#### RESTful API to update a profile
+### RESTful API to update a profile
 
-##### post_education
+#### post_education
 
 POST/DELETE URL:
 
@@ -77,7 +75,7 @@ or
 [{"from":"2007-09","to":"2010-07","school":"Takapuna","level":"intermediate"}]
 ```
 
-##### put_education_by_index
+#### put_education_by_index
 
 PUT/DELETE URL:
 
@@ -89,9 +87,9 @@ PUT/DELETE URL:
 {"from":"2007-09","to":"2010-07","school":"Milford","level":"intermediate"}
 ```
 
-## RESTful API
+# RESTful API
 
-### Serve JSON data using express.route and MongoDB
+## Serve JSON data using express.route and MongoDB
 
 ```
 cd restful-apis
